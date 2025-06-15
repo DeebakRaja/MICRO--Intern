@@ -1,0 +1,44 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+// Structure to hold project details
+struct Project {
+    string title;
+    string description;
+};
+
+int main() {
+    // Portfolio information
+    string name = "Deebak Raja K S";
+    string bio = "I am a software developer with expertise in C++, Python, and web development. Passionate about building innovative solutions.";
+
+    vector<Project> projects = {
+        {"Portfolio Website", "A personal portfolio website built using HTML, CSS, and JavaScript."},
+        {"Inventory System", "A desktop application for managing inventory using C++ and MySQL."},
+        {"Weather App", "A Python-based application that provides real-time weather updates."}
+    };
+
+    string contactEmail = "john.doe@example.com";
+
+    // Display Portfolio
+    cout << "==============================" << endl;
+    cout << "         My Portfolio         " << endl;
+    cout << "==============================" << endl;
+
+    cout << "\nAbout Me:\n";
+    cout << "Name: " << name << endl;
+    cout << "Bio: " << bio << endl;
+
+    cout << "\nProjects:\n";
+    for (size_t i = 0; i < projects.size(); ++i) {
+        cout << i + 1 << ". " << projects[i].title << " - " << projects[i].description << endl;
+    }
+
+    cout << "\nContact:\n";
+    cout << "Email: " << contactEmail << endl;
+
+    cout << "\nThank you for visiting my portfolio!" << endl;
+
+    return 0;
+}
